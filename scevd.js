@@ -22,16 +22,13 @@
          async:true,
          dataType:'text',
          success:function(data){
-    console.log(game_id);
              $('#content-area').append("<div id='div_d'></div>");
              var obj=jQuery.parseHTML(data);
              var htmlStr='';
              $(obj).find('.showcase-element-container').each(function(){
                  htmlStr+=$(this).prop("outerHTML");
              });
-    console.log(htmlStr);
              $('#div_d').html(htmlStr);
-    console.log('donw');
          }
      });
 })();
